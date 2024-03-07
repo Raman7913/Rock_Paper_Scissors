@@ -1,5 +1,5 @@
-playGame();
-
+// playGame();
+playRound("rock","paper");
 function getComputerChoice(){
     let a = Math.random();
     if(a>0.33&&a<0.66){
@@ -57,25 +57,25 @@ function playRound(userSelection,computerSelection){
         }
     }
 }
-function playGame(){
-    let userwins=0;
-    let computerwins=0;
-    for(let i=1;i<=5;i++){
-        let userSelection=prompt("enter rock paper or scissor:").toLowerCase();
-        let computerSelection=getComputerChoice();
-        let a = playRound(userSelection,computerSelection);
-        if(a=="computer wins")
-            computerwins++;
-        if(a=="user wins")
-            userwins++;
-    }
-    if(computerwins>userwins){
-        console.log("computer wins with" + computerwins + " wins");
-    }
-    else if(userwins>computerwins){
-        console.log("user wins with" + userwins + " userwins");
-    }
-    else{
-        console.log("draw with" + userwins + " each");
-    }
-}
+// function playGame(){
+//     let userwins=0;
+//     let computerwins=0;
+//     for(let i=1;i<=5;i++){
+//         let userSelection=prompt("enter rock paper or scissor:").toLowerCase();
+//         let computerSelection=getComputerChoice();
+//         let a = playRound(userSelection,computerSelection);
+//         if(a=="computer wins")
+//             computerwins++;
+//         if(a=="user wins")
+//             userwins++;
+//     }
+//     if(computerwins>userwins){
+//         console.log("computer wins with" + computerwins + " wins");
+//     }
+//     else if(userwins>computerwins){
+//         console.log("user wins with" + userwins + " userwins");
+//     }
+//     else{
+//         console.log("draw with" + userwins + " each");
+//     }
+// }
