@@ -1,14 +1,23 @@
-// playGame();
-playRound("rock","paper");
+//  playGame();
+
+let rock=document.querySelector('.rock');
+rock.addEventListener('click',()=>{playRound("rock",getComputerChoice());});
+
+let paper=document.querySelector('.paper');
+paper.addEventListener('click',()=>{playRound("paper",getComputerChoice());});
+
+let scissor=document.querySelector('.scissor');
+scissor.addEventListener('click',()=>{playRound("scissor",getComputerChoice());});
+
 function getComputerChoice(){
-    let a = Math.random();
-    if(a>0.33&&a<0.66){
+    let a = Math.floor(Math.random()*3);
+    if(a==0){
         return "paper";
     }
-    else if(a<0.33){
+    else if(a==1){
         return "rock";
     }
-    else{
+    else if(a==2){
         return "scissor";
     }
 }
@@ -17,43 +26,43 @@ function playRound(userSelection,computerSelection){
     if(userSelection=="rock"){
         if(computerSelection=="rock"){
             console.log("draw");
-            return("draw");
+            // return("draw");
         }
         else if(computerSelection=="paper"){
             console.log("computer wins");
-            return("computer wins");
+            // return("computer wins");
         }
         else if(computerSelection=="scissor"){
             console.log("user wins");
-            return("user wins");
+            // return("user wins");
         }
     }
     else if(userSelection=="paper"){
         if(computerSelection=="rock"){
             console.log("user wins");
-            return("user wins");
+            // return("user wins");
         }
         else if(computerSelection=="paper"){
             console.log("draw");
-            return("draw");
+            // return("draw");
         }
         else if(computerSelection=="scissor"){
             console.log("computer wins");
-            return("computer wins");
+            // return("computer wins");
         }
     }
     else if(userSelection=="scissor"){
         if(computerSelection=="rock"){
             console.log("computer wins");
-            return("computer wins");
+            // return("computer wins");
         }
         else if(computerSelection=="scissor"){
             console.log("draw");
-            return("draw");
+            // return("draw");
         }
         else if(computerSelection=="paper"){
             console.log("user wins");
-            return("user wins");
+            // return("user wins");
         }
     }
 }
